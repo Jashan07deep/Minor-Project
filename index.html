@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Healthcare Dashboard Prototype</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f6ff;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: #2b6cff;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+    }
+    .container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .card:hover { transform: scale(1.03); }
+
+    .hidden { display: none; }
+
+    .details {
+      padding: 20px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background: #2b6cff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover { background: #1f55d1; }
+
+    .back-btn {
+      margin-bottom: 15px;
+      background: gray;
+    }
+  .banner {
+      background: linear-gradient(135deg, #2b6cff, #6a9bff);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    .banner h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    .quotes {
+      background: white;
+      padding: 10px;
+      font-style: italic;
+      color: #2b6cff;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      margin-top: 20px;
+    }
+.reviews {
+      padding: 40px 20px;
+      text-align: center;
+      background: #ffffff;
+    }
+
+    .reviews h2 { color: #2b6cff; margin-bottom: 20px; }
+
+    .review-box {
+      display: inline-block;
+      width: 250px;
+      margin: 15px;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .review-box img {
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .gallery {
+      padding: 40px 20px;
+      background: #f2f6ff;
+      text-align: center;
+    }
+
+    .photo-space {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 180px;
+      height: 140px;
+      margin: 15px;
+      
+      border-radius: 15px;
+      color: #2b6cff;
+      font-weight: bold;
+    }
+
+    .container { margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<header>Healthcare Resource Dashboard</header>
+
+<div class="banner">
+  <h1>Care That Never Stops</h1>
+  <p>Real-time insights for better healthcare decisions</p>
+</div>
+
+<div class="quotes">
+  <marquee>"Saving lives starts with smart management" • "Technology empowering healthcare" • "Every bed counts, every breath matters"</marquee>
+</div>
+
+<section class="reviews">
+  <h2>People Trusting Our Platform</h2>
+  <div class="review-box">
+    <img src="./Rahul-sharma.png" alt="User" style="width: 100%; border-radius: 100%;">
+    <p>"This system helped us find hospital beds instantly during emergency."</p>
+    <strong>- Rahul Sharma</strong>
+  </div>
+  <div class="review-box">
+    <img src="./Ananya-verma.png" alt="User" style="width: 100%; border-radius: 100%;">
+    <p>"Real-time updates saved precious time for my family."</p>
+    <strong>- Ananya Verma</strong>
+  </div>
+  <div class="review-box">
+    <img src="./Mohit-singh.png" alt="User" style="width: 100%; border-radius: 100%;">
+    <p>"Very easy to use and extremely helpful in crisis."</p>
+    <strong>- Mohit Singh</strong>
+  </div>
+</section>
+
+<section class="gallery">
+    <br>
+  
+  <div class="photo-space">
+    <img src="./Nurse.png" alt="Nurse" style="width: 100%; border-radius: 12px;">
+  </div>
+  <div class="photo-space">
+    <img src="./Doctor-attending.png" alt="Doctor attending patient" style="width: 100%;border-radius: 12px;">
+  </div>
+  <div class="photo-space">
+    <img src="./Group-of-doctors.png" alt="Group of doctors" style="width: 100%; border-radius: 12px;">
+  </div>
+</section>
+
+
+<div id="main" class="container">
+
+  <a href="hospital1.html" class="card">
+    <img src="./Citycarehospital.png" style="width:100%;border-radius:12px;margin-bottom:10px;" />
+    <h3>City Care Hospital</h3>
+    <p>Available Beds: 5</p>
+    <p>Oxygen Level: 80%</p>
+  </a>
+
+  <a href="#" class="card" onclick="zeroAlert()">
+    <img src="./Lifeline-medical-center.png" style="width:100%;border-radius:12px;margin-bottom:10px;" />
+    <h3>LifeLine Medical Center</h3>
+    <p>Available Beds: 0</p>
+    <p>Oxygen Level: 60%</p>
+  </a>
+
+  <a href="hospital2.html" class="card">
+    <img src="./Greenvalley-hospital.png" style="width:100%;border-radius:12px;margin-bottom:10px;" />
+    <h3>Green Valley Hospital</h3>
+    <p>Available Beds: 12</p>
+    <p>Oxygen Level: 90%</p>
+  </a>
+
+</div>
+
+
+<script>
+function zeroAlert(){
+  alert("Zero availability");
+}
+</script>
+
+<div id="hospitalPage" class="hidden details">
+  <button class="back-btn" onclick="goBack()">Back</button>
+  <h2 id="hospitalName"></h2>
+  <p><strong>Location:</strong> Sector 21, City Center</p>
+  <p><strong>Maximum Occupancy:</strong> 200 Patients</p>
+  <p><strong>Facilities:</strong> ICU, Emergency, Oxygen Support, Ambulance, Pharmacy</p>
+
+  <h3>Patient Details</h3>
+  <input type="text" id="patientName" placeholder="Patient Name">
+  <input type="number" id="patientAge" placeholder="Patient Age">
+  <textarea id="symptoms" placeholder="Enter Symptoms"></textarea>
+  <button onclick="submitForm()">Submit</button>
+</div>
+
+
+<script>
+function zeroAlert(){
+  alert("Zero availability");
+}
+</script>
+
+</body>
+</html>
+

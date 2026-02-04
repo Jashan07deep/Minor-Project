@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hospital Details</title>
+
+<style>
+body{
+  font-family:Arial;
+  background:#f2f6ff;
+  padding:30px;
+}
+
+.box{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  max-width:400px;
+  margin:auto;
+  box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+input,textarea,button{
+  width:100%;
+  padding:10px;
+  margin:10px 0;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+button{
+  background:#2b6cff;
+  color:white;
+  border:none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2 id="hospitalName"></h2>
+
+<p><b>Location:</b> Sector 21, City Center</p>
+<p><b>Max Occupancy:</b> 200 Patients</p>
+<p><b>Facilities:</b> ICU, Emergency, Oxygen, Ambulance</p>
+
+<h3>Patient Details</h3>
+
+<input id="name" placeholder="Patient Name">
+<input id="age" type="number" placeholder="Age">
+<textarea id="symptoms" placeholder="Symptoms"></textarea>
+
+<button onclick="submitAlert()">Submit</button>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+document.getElementById("hospitalName").innerText = params.get("name");
+
+function submitAlert(){
+  if(
+    name.value=="" || 
+    age.value=="" || 
+    symptoms.value==""
+  ){
+    alert("Fill all details");
+  }
+  else{
+    alert("Patient registered successfully!");
+  }
+}
+</script>
+
+</body>
+</html>
